@@ -1,0 +1,339 @@
+:root {
+	--theme-color: #2fb3fe;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+	background: #555;
+	/* background-image: radial-gradient(red, orange, yellow, green); */
+	/* background-image: linear-gradient(red, orange, yellow); */
+	/* background-image: linear-gradient(to right, red, orange, yellow); */
+	/* background-image: linear-gradient(45deg, red, orange, yellow); */
+	/* background-image: repeating-linear-gradient(45deg, transparent, transparent 40px,
+	 orange 40px, orange 80px, yellow 80px, yellow 120px); */
+	background-image: repeating-linear-gradient(45deg, transparent, transparent 4px, #00000033 4px, #00000033 8px);
+	/* https://rgbacolorpicker.com/rgba-to-hex#google_vignette */
+	margin: 30px;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.75;
+	background-attachment: fixed;
+}
+
+nav {
+	text-align: center;
+	max-width: 1450px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav li {
+	display: inline;
+}
+
+nav ul a {
+	color: #fff;
+	font-weight: 800;
+	text-transform: uppercase;
+	padding: 11px;
+	display: inline-block;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: bottom;
+}
+
+a {
+	color: #2985d1;
+	text-decoration: none;
+}
+
+/*
+.download-pdf {
+	background-image: url(../img/icon-pdf.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 20px 24px;
+	padding-right: 24px;
+}
+
+.watch-yt-video {
+	background-image: url(../img/icon-youtube.svg);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 24px 24px;
+	padding-right: 30px;
+}
+
+.visit-website {
+	background-image: url(../img/icon-external-link.svg);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 24px 24px;
+	padding-right: 30px;
+}
+*/
+
+/* attribute selectors instead of classes
+to specifically target ONE or more tags */
+
+/* target any link whose href ends in ".pdf" */
+/* ^= is a wildcard match meaning "starts with" */
+/* *= is a wildcard match meaning "contains" */
+/* $= is a wildcard match meaning "ends with" */
+
+a[href$=".pdf"] {
+	background-image: url(../img/icon-pdf.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 20px 24px;
+	padding-right: 24px;
+}
+
+a[href^="https://"] {
+	background-image: url(../img/icon-external-link.svg);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 24px 24px;
+	padding-right: 30px;
+}
+
+a[href*="youtube"] {
+	background-image: url(../img/icon-youtube.svg);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 24px 24px;
+	padding-right: 30px;
+}
+
+h1, h2 {
+	font-family: 'Alfa Slab One', 'Open Sans', sans-serif;
+	font-weight: normal;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 11vw;
+	margin-bottom: 10px;
+}
+
+h2 {
+	font-size: 28px;
+	/* background: #2fb3fe; */
+	/* color: #fff; */
+	padding: 15px;
+	padding-bottom: 5px;
+	margin-top: 0;
+	margin-bottom: 0;
+	letter-spacing: 1px;
+}
+
+/* target sections inside hikes.html ONLY, since 
+that is only page that has <main class="price-list"> */
+
+/* give all sections everywhere, index.html AND hikes.html, white bg */
+section {
+	background-color: #fff;
+}
+
+/* override white bg in hikes.html sections ONLY
+middle col will not be affected, since it has its own local bg color */
+.price-list section {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	/* align-items: flex-start; */
+	background-color: #ddd;
+	margin-top: 50px;
+}
+
+section p {
+	margin: 15px;
+}
+
+/* text-wrapper is a div found in only sections
+in hikes.html -- it wraps all section content */
+.text-wrapper {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: flex-end; */
+	/* align-items: flex-start; */
+}
+
+/* show the boxes inside text-wrapper, each individual one */
+/* .text-wrapper * {
+	border: 4px dashed red;
+} */
+
+h2 + p {
+	margin-top: 0;
+	font-weight: 700;
+	font-style: italic;
+	opacity: .4;
+}
+
+header, section {
+	/* border: 4px solid var(--theme-color); */
+	margin: 30px auto;
+	/* background: #fff; */
+	padding: 20px;
+	/* max-width: 800px; */
+}
+
+header {
+	/* rgba(0, 201, 255, 0.6) = #00c9ff99 */
+	/* rgba(146, 254, 157, 0.6) = #92fe9d99 */
+	background-image: linear-gradient(#00c9ff99, #92fe9d99),
+					  url(../img/masthead.jpg);
+	background-position: center;
+	background-size: cover;
+	color: #fff;
+	text-align: center;
+	padding: 2% 5%;
+	max-width: 1450px;
+}
+
+header img {
+	width: 130px;
+}
+
+main {
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+.read-more:hover, .read-more:focus {
+	color: red;
+}
+
+.read-more svg {
+	vertical-align: baseline;
+	margin-left: 5px;
+}
+
+.read-more svg * {
+	stroke: currentColor;
+	stroke-width: 1.2;
+}
+
+.read-more::after {
+	content: " »";
+}
+
+/* .read-more::before {
+	content: "HOLA ";
+} */
+
+.popular {
+	background-color: var(--theme-color);
+	color: #fff;
+	padding: 10px 15px;
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.book-now-btn {
+	background-color: coral;
+	border-radius: 15px;
+	color: #fff;
+	padding: 5px 15px;
+}
+
+footer {
+	color: #ccc;
+	text-align: center;
+	font-weight: 300;
+}
+
+/* media query w breakpt at 800px */
+@media (min-width: 800px) {
+
+	body {
+		margin-top: 0px;
+		background-image: none;
+	}
+
+	header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		/* max-width: 1000px; */
+		margin-top: 15px;
+		height: 35vh;
+		border: none;
+	}
+
+	nav img {
+		max-width: 120px;
+	}
+
+	header, section {
+		/* box-shadow: horiz_offset, vert_offset, blur, color; */
+		box-shadow: 5px 15px 10px #00000055;
+	}
+
+	nav {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		background-color: #00000055; /* rgba(0,0,0,.33) */
+		position: fixed;
+		padding: 10px 10px 5px 20px;
+		top: 10px;
+		/* left & right both 0 stretch the nav
+		to span the entire width of the page */
+		left: 0;
+		right: 0;
+		text-align: left;
+		/* max-width: 1000px; */
+		margin: 0 auto;
+	}
+
+	nav ul a:hover, nav ul a:focus {
+		border-radius: 5px;
+		background-color: var(--theme-color);
+	}
+
+	nav ul a {
+		font-weight: 400;
+		font-size: 12px;
+	}
+
+	h1 {
+		margin-top: 80px;
+		font-size: 7vw;
+	}
+
+}
+
+@media (min-width: 1100px) {
+
+	h1 {
+		font-size: 5vw;
+	}
+
+	/* set main to flex to get 3 col sections */
+	main {
+		display: flex;
+	}
+
+	section {
+		margin: 10px;
+	}
+
+}
+
+@media (min-width: 1400px) {
+
+	h1 {
+		font-size: 3vw;
+	}
+
+}

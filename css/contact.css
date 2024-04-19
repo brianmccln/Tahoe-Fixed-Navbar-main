@@ -1,0 +1,295 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+	font-size: 17px;
+}
+body {
+	margin: 0;
+	margin-top: 4px;
+	color: #666;
+	font-family: Ubuntu, sans-serif;
+	font-weight: 300;
+	line-height: 1.7;
+}
+a {
+	color: #7096C1;
+}
+a:hover, a:focus {
+	color: #6d98bf;
+}
+h1, h2, h3 {
+	font-family: Dosis, sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1.1;
+	color: #000;
+}
+h1 {
+	font-size: 38px;
+	text-align: center;
+	margin: 0 0 5px;
+}
+h2 {
+	font-weight: 600;
+	font-size: 22px;
+	margin: 30px 0;
+}
+h3 {
+	color: currentColor;
+	font-size: 18px;
+	margin: 0 0 7px;
+}
+h1 + p {
+	margin-bottom: 30px;
+	text-align: center;
+}
+.content-wrapper {
+	margin: 0 auto;
+	max-width: 768px;
+	padding: 20px;
+}
+header {
+	border-bottom: 1px solid #ddd;
+}
+header nav {
+	text-align: center;
+	font-weight: 400;
+}
+nav ul, footer ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+nav li, footer li {
+	display: inline-block;
+	margin: 0 7px;
+}
+nav li:first-child {
+	margin-left: 0;
+}
+nav li:last-child {
+	margin-right: 0;
+}
+nav a, footer a {
+	color: #666;
+	text-decoration: none;
+}
+nav form {
+	display: inline-block;
+}
+.volunteer-form {
+	border: solid 1px #ddd;
+	border-radius: 0 0 8px 8px;
+	padding: 25px;
+}
+
+.form-heading {
+	background: #888;
+	color: #fff;
+	padding: 17px 25px;
+	line-height: 1;
+	border-radius: 8px 8px 0 0;
+	margin-bottom: 0;
+}
+
+/* > is the direct descendant selector; form > label
+targets only those labels that are nested one-deep
+in the form; this excludes the checkbox labels, 
+which are great-great-grandchildren of the form */
+form > label {
+	display: block;
+	margin: 20px 0 5px;
+}
+
+/* target the first child of that type in parent
+parent: child:first-of-type */
+form > label:first-of-type {
+	margin-top: -20px;
+}
+
+/* elem[attr=val] is the attribute selector syntax; targets only the attr of specified value : ^= starts with  
+*= contains  $= end with  */
+input[type="text"], 
+input[type="email"], 
+textarea {
+	display: block;
+	width: 100%;
+	background-color: #eee;
+	border: none;
+	border-radius: 8px;
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+textarea {
+	min-height: 120px;
+	/* prevent horiz resizing */
+	resize: vertical;
+}
+
+/* no outlines on focus */
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="submit"],
+textarea {
+	outline: none;
+}
+
+/* change bg and text color on focus,
+that is, when typing in a box */
+input:focus, textarea:focus {
+	background-color: #e1efff;
+	color: #02387a
+}
+
+aside section {
+	background: #eee;
+	border-radius: 8px;
+	margin-top: 30px;
+	padding: 30px;
+	position: relative;
+}
+
+/* turn off border around checkboxes
+and also remove default margin and
+padding of fieldset */
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* turn off dots next to checkboxes */
+fieldset ul {
+	list-style-type: none; /* lstn */
+	margin: 0 0 0 20px;
+	padding: 0;
+}
+
+legend {
+	margin-bottom: 10px;
+}
+
+/* style the submit btn to be big, bold and colorful */
+input[type="submit"] {
+	font-family: Dosis, sans-serif;
+	font-weight: 600;
+	font-size: 20px;
+	text-transform: uppercase;
+	background-color: #6bb359;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 8px;
+}
+
+input[type="submit"]:hover, 
+input[type="submit"]:focus {
+	background-color: #449d44;
+}
+
+input[type="search"] {
+	width: 160px;
+	padding: 6px 15px;
+	border-radius: 50px;
+	border: 1px solid #a4c1e6;
+	-webkit-appearance: none;
+}
+
+input[type="search"]::placeholder {
+	color: #4197ff;
+	opacity: .5;
+	line-height: normal;
+}
+
+aside section p {
+	margin: 0;
+}
+.time-badge {
+	font-family: Dosis, sans-serif;
+	font-weight: 600;
+	background: #888;
+	border-radius: 20px;
+	padding: 7px 12px;
+	font-size: 18px;
+	line-height: 1;
+	color: #fff;
+	text-transform: uppercase;
+	position: absolute;
+	top: -9px;
+	left: -9px;
+}
+.opportunity-icon {
+	width: 100px;
+	margin-right: 20px;
+	float: left;
+	border-radius: 50%;
+}
+footer {
+	border-top: solid 1px #ddd;
+	font-size: 13px;
+	text-align: center;
+}
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+@media (max-width: 749px) {
+	nav input[type="search"] {
+		margin-top: 8px;
+	}
+}
+
+@media (min-width: 750px) {
+	header nav {
+		text-align: left;
+		line-height: 19px;
+	}
+	header .logo {
+		display: inline-block;
+		margin-top: -3px;
+	}
+	header ul {
+		float: right;
+	}
+	footer {
+		text-align: left;
+	}
+	footer ul {
+		display: inline-block;
+		margin: 0;
+	}
+	.copyright {
+		float: right;
+	}
+}
+
+@media (min-width: 930px) {
+	.content-wrapper {
+		padding: 30px;
+		max-width: 1100px;
+	}
+	main.content-wrapper {
+		padding: 40px 30px;
+	}
+	h1 + p {
+		width: 68%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50px;
+	}
+	h2 {
+		margin-top: 0;
+	}
+	.form-column {
+		width: 60%;
+		float: left;
+	}
+	aside {
+		width: 35%;
+		float: right;
+	}
+}

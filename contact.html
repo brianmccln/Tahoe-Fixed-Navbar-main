@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+    <style>
+        main {
+            flex-direction: column;
+            background-color: #fff;
+            margin: 130px auto;
+            max-width: 600px;
+            padding: 30px;
+            border: 5px solid #aaa;
+        }
+        h1 {
+            font-size: 1.5em;
+        }
+        h1 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, textarea {
+            margin-top: 10px;
+            width: 100%;
+            padding: 8px 10px;
+            border-radius: 10px;
+            border: none;
+            background-color: #bbb;
+            color: #fff;
+        }
+
+        input:focus, textarea:focus {
+            background-color: #cde;
+            color: #556;
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #fff;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #353;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <a href="index.html" class="logo"><img src="img/tahoe-logo.svg" alt="Hiking Packages | Tahoe Adventure Club"></a>
+        <ul>
+            <li><a href="excursions.html">Excursions</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h1>Contact Us</h1>
+        Phone: (212) 555-1234<br>
+        Email: brian@nobledesktop.com<br>
+        Location: 185 Madison Ave, New York, NY 11206</h4>
+        
+        <form action="contact-proc.php" method="get">
+
+            <table>
+
+                <tr>
+                    <td>
+                        <input type="text" name="firstName" 
+                        placeholder="First Name" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="text" name="lastName" 
+                        placeholder="Last Name" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="email" name="email" 
+                        placeholder="Email" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <textarea name="comments" cols="60" rows="5" 
+                        placeholder="Comments"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="submit" name="submit">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+    </main>
+
+    <footer>
+        &copy; Copyright 2024 - Tahoe Adventure Club
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
