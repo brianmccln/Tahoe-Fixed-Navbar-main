@@ -1,10 +1,10 @@
 <?php
     // handle the incoming form vars from contact.php
     // see book pg 12
-    $firstName = $_POST['firstName'];
-    $lastName = $_POST['lastName'];
-    $email = $_POST['email'];
-    $comments = $_POST['comments'];
+    $firstName = $_GET['firstName'];
+    $lastName = $_GET['lastName'];
+    $email = $_GET['email'];
+    $comments = $_GET['comments'];
 
     // concatenate the form vars into a message
     $msg = "Email from Contact Form";
