@@ -14,14 +14,14 @@
     $msg .= "\n\nComments:\n" . $comments;
 
     // set vars for the mail() method
-    $to = "brian@nobledesktop.com";
+    $to = "brianmccln@yahoo.com";
     $subject = "Contact Form from Website";
     $mailheaders = "From: " . $email;
     $mailheaders .= "\nReply-to: " . $email;
 
     // send the email
     mail($to, $subject, $msg, $mailheaders);
-    $title = "Message Sent";
+    $title = "Message Sent to ". $to;
 ?>
 
 <!DOCTYPE html>
